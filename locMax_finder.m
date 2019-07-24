@@ -43,31 +43,4 @@ plot3(mtx_trns(:,1),mtx_trns(:,2),mtx_trns(:,3),'r.','MarkerSize',14)
 
 end
 
-%% Try plotting FRET values from HMM - THIS DID NOT WORK.
-% But it is helpful to have hmmFRET defined in this file.
 
-%--------------------------------------------------------------------------
-% Define the HMM FRET information here
-%--------------------------------------------------------------------------
-
-fileEndName = 'PATH.dat';
-fileNames = dir(['*' fileEndName]);
-numFiles = length(fileNames);
-
-for molNum = 1:numFiles  
-    fileName = fileNames(molNum).name;   
-    pathFile = importdata(fileName,' ',0);   
-    hmmFRET = pathFile(:,5);
-end
-
-
-FRET_vals = unique(hmmFRET);
-% hold on
-% plot(FRET_vals(1),FRET_vals(2),1.8*10^-3,'blue.','MarkerSize',15)
-% hold on
-% plot(FRET_vals(2),FRET_vals(3),1.8*10^-3,'blue.','MarkerSize',15)
-% hold on
-% plot(FRET_vals(3),FRET_vals(4),1.8*10^-3,'blue.','MarkerSize',15)
-% hold on
-% plot(FRET_vals(4),FRET_vals(5),1.8*10^-3,'blue.','MarkerSize',15)
-hold off

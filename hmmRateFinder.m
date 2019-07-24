@@ -1,5 +1,5 @@
 %__________________________________________________________________________
-% Author: Brett Israels
+% Author: Brett Israels & Claire
 %
 % FUNCTION: hmmRateFinder
 %
